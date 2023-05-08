@@ -31,6 +31,12 @@ local plugins = {
       {'hrsh7th/cmp-nvim-lsp'}, -- Required
       {'L3MON4D3/LuaSnip'},     -- Required
     }
+  },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = function ()
+      pcall(vim.cmd, 'TSUpdate')
+    end 
   }
 }
 
