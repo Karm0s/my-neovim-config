@@ -36,7 +36,12 @@ local plugins = {
     'nvim-treesitter/nvim-treesitter',
     build = function ()
       pcall(vim.cmd, 'TSUpdate')
-    end 
+    end
+  },
+  {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.1',
+    dependencies = { 'nvim-lua/plenary.nvim' }
   }
 }
 
