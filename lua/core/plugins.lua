@@ -42,6 +42,16 @@ local plugins = {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.1',
     dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    lazy = true,
+    version = "*",
+    dependencies = {"nvim-tree/nvim-web-devicons"}
+  },
+  {
+    "folke/which-key.nvim",
+    lazy = true
   }
 }
 
