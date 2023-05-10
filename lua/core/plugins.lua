@@ -12,47 +12,51 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-  {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
-    dependencies = {
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
-      {                                      -- Optional
-        'williamboman/mason.nvim',
-        build = function()
-          pcall(vim.cmd, 'MasonUpdate')
-        end,
-      },
-      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+    {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v2.x',
+        dependencies = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {                                      -- Optional
+                'williamboman/mason.nvim',
+                build = function()
+                    pcall(vim.cmd, 'MasonUpdate')
+                end,
+            },
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-      -- Autocompletion
-      {'hrsh7th/nvim-cmp'},     -- Required
-      {'hrsh7th/cmp-nvim-lsp'}, -- Required
-      {'L3MON4D3/LuaSnip'},     -- Required
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},     -- Required
+            {'hrsh7th/cmp-nvim-lsp'}, -- Required
+            {'L3MON4D3/LuaSnip'},     -- Required
+        }
+    },
+
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = function ()
+            pcall(vim.cmd, 'TSUpdate')
+        end
+    },
+
+    {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.1',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+
+    {
+        "nvim-tree/nvim-tree.lua",
+        lazy = true,
+        version = "*",
+        dependencies = {"nvim-tree/nvim-web-devicons"}
+    },
+
+    {
+        "folke/which-key.nvim",
+        lazy = true
     }
-  },
-  {
-    'nvim-treesitter/nvim-treesitter',
-    build = function ()
-      pcall(vim.cmd, 'TSUpdate')
-    end
-  },
-  {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.1',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
-  {
-    "nvim-tree/nvim-tree.lua",
-    lazy = true,
-    version = "*",
-    dependencies = {"nvim-tree/nvim-web-devicons"}
-  },
-  {
-    "folke/which-key.nvim",
-    lazy = true
-  }
 }
 
 local opts = {}
