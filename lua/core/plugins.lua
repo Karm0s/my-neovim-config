@@ -61,7 +61,13 @@ local plugins = {
     {
         "catppuccin/nvim",
         name = "catppuccin"
+    },
+
+    {
+        "windwp/nvim-autopairs",
+        config=true
     }
+
 }
 
 local opts = {}
