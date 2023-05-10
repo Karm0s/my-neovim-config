@@ -56,6 +56,11 @@ local plugins = {
     {
         "folke/which-key.nvim",
         lazy = true
+    },
+
+    {
+        "catppuccin/nvim",
+        name = "catppuccin"
     }
 }
 
