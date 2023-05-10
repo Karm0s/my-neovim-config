@@ -66,6 +66,10 @@ local plugins = {
     {
         "windwp/nvim-autopairs",
         config=true
+    },
+
+    {
+        'nvim-lualine/lualine.nvim'
     }
 
 }
