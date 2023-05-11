@@ -35,7 +35,7 @@ local options = {
   wrap = false,                            -- display lines as one long line
   -- scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
-  guifont = "monospace:h17",               -- the font used in graphical neovim applications
+  guifont = "JetBrainsMono_Nerd_Font_Mono:h12",               -- the font used in graphical neovim applications
   title = true,
   -- colorcolumn = "80",
   -- colorcolumn = "120",
@@ -59,4 +59,3 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set guifont=JetBrainsMono_Nerd_Font_Mono:h12 ]]
