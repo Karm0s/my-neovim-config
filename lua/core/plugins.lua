@@ -70,7 +70,9 @@ local plugins = {
 
     {
         'nvim-lualine/lualine.nvim'
-    }
+    },
+
+    {'numToStr/Comment.nvim'}
 
 }
 
