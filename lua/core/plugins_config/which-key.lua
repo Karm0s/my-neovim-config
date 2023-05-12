@@ -55,7 +55,7 @@ wk.register({
       s = {'<cmd>lua vim.lsp.buf.signature_help()<cr>', 'Signature help'},
       a = {'<cmd>lua vim.lsp.buf.code_action()<cr>', 'Code action'},
       w = {'<cmd>lua vim.lsp.buf.workspace_symbol()<cr>', 'Workspace symbol'}
-    }
+    },
   }
 })
 
